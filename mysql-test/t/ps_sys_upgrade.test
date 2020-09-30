@@ -1,0 +1,16 @@
+#Performance schema upgrade/downgrade tests
+-- source include/big_test.inc
+#Memory checks will be done by ASAN builds, valgrind timeout on this test.
+--source include/not_valgrind.inc
+
+--echo #
+--echo # Test case to verify upgrade/downgrade with upgrade_mode = FORCE
+--echo #
+--let upgrade_mode = FORCE
+--source include/ps_sys_upgrade.inc
+
+--echo #
+--echo # Test case to verify upgrade/downgrade with upgrade_mode = FORCE_AND_SHUTDOWN
+--echo #
+--let upgrade_mode = FORCE_AND_SHUTDOWN
+--source include/ps_sys_upgrade.inc

@@ -1,0 +1,5 @@
+--innodb-doublewrite=0
+--innodb_buffer_pool_load_at_startup=OFF
+--skip-log-bin
+--skip-log-slave-updates
+--skip-slave-preserve-commit-order

@@ -1,0 +1,4 @@
+[mysql]
+no-defaults
+
+[mysqld.1]
